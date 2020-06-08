@@ -15,4 +15,13 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<Employee> list(){
         return employeeMapper.list();
     }
+    public void add(Employee employee){
+        employeeMapper.add(employee);
+    }
+    public void delete(int id){
+        employeeMapper.delete(id);
+    }
+    public void update(Employee employee){
+        employeeMapper.update(employee);
+    }
 }

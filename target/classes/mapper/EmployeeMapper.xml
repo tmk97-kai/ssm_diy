@@ -6,4 +6,16 @@
     <select id="list" resultType="Employee">
         select * from employee
     </select>
+
+    <insert id="add" keyProperty="id" useGeneratedKeys="true" parameterType="Employee">
+        insert into employee ( age,name,sex,address ) values (#{id},#{name},#{sex},#{address})
+    </insert>
+
+    <delete id="delete">
+        delete from employee where id=#{id}
+    </delete>
+
+    <update id="update" parameterType="Employee">
+        update employee set age=#{id},name=#{name},sex=#{sex},address=#{address} where id=#{id}
+    </update>
 </mapper>
